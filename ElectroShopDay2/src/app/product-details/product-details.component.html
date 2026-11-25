@@ -1,0 +1,17 @@
+<h2>Product Details</h2>
+
+<div class="details">
+  <img [src]="productImage" [alt]="productName" />
+  <h3>{{ productName }}</h3>
+  <p>{{ productDescription }}</p>
+  <p>Price: ${{ productPrice }}</p>
+  <p>Discount: {{ discountPercentage }}%</p>
+  <p>Available: {{ isAvailable }}</p>
+
+  <p>
+    Quantity:
+    <button (click)="decreaseQuantity()">-</button>
+    {{ quantity }}
+    <button (click)="increaseQuantity()">+</button>
+  </p>
+</div>
