@@ -1,0 +1,10 @@
+<h2>🛒 Shopping Cart</h2>
+
+@if (Quantity() > 0) {
+  <p>Product: {{ ProductName() }}</p>
+  <p>Unit Price: {{ Price() | currency: 'USD' : 'symbol' : '1.0-0' }}</p>
+  <p>Quantity: {{ Quantity() }}</p>
+  <p><strong>Total Price: {{ TotalPrice() | currency: 'USD' : 'symbol' : '1.0-0' }}</strong></p>
+} @else {
+  <p>Your cart is empty.</p>
+}

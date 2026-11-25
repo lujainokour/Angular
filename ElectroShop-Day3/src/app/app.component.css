@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  font-family: sans-serif;
+  padding: 16px;
+}
+
+.layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-top: 16px;
+}

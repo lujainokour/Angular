@@ -1,0 +1,17 @@
+<h2>Product Details</h2>
+
+<h3>{{ ProductName() }}</h3>
+<p>{{ Description() }}</p>
+
+<p>
+  Price: {{ Price() | currency: 'USD' : 'symbol' : '1.0-0' }} | Status:
+  {{ IsAvailable() ? 'Available' : 'Not Available' }}
+</p>
+
+<div>
+  <button (click)="decreaseQuantity()" [disabled]="Quantity() <= 1">−</button>
+  <span>{{ Quantity() }}</span>
+  <button (click)="increaseQuantity()">+</button>
+
+  <button (click)="addToCart()" [disabled]="!IsAvailable()">Add to Cart</button>
+</div>

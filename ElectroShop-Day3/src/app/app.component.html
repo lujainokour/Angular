@@ -1,0 +1,20 @@
+<h1>ElectroShop</h1>
+
+<button (click)="showLaptop()">Laptop</button>
+<button (click)="showHeadphones()">Wireless Headphones</button>
+
+<div class="layout">
+  <app-product-details
+    [ProductName]="ProductName()"
+    [Description]="Description()"
+    [Price]="Price()"
+    [IsAvailable]="IsAvailable()"
+    (productAdded)="receiveProduct($event)">
+  </app-product-details>
+
+  <app-shopping-cart
+    [ProductName]="CartProductName()"
+    [Price]="CartPrice()"
+    [Quantity]="CartQuantity()">
+  </app-shopping-cart>
+</div>
